@@ -1,0 +1,51 @@
+/*fonts*/
+
+@font-face{
+	src: url(../fonts/BebasNeue.otf);
+	font-family: "letra-primaria";
+}
+
+@font-face{
+	src: url(../fonts/TrebuchetMS.ttf);
+	font-family: "letra-secundaria";
+}
+
+@font-face{
+	src: url(../fonts/websymbols-regular-webfont.eot);
+	font-family: "simbol1";
+}
+
+
+@font-face{
+	src: url(../fonts/websymbols-regular-webfont.svg);
+	font-family: "simbol2";
+}
+
+
+@font-face{
+	src: url(../fonts/websymbols-regular-webfont.ttf);
+	font-family: "simbol3";
+}
+
+@font-face{
+	src: url(../fonts/websymbols-regular-webfont.woff);
+	font-family: "simbol4";
+}
+
+/*fin fonts*/
+
+/*variables-fonts*/
+
+$font-primaria: letra-primaria;
+$font-secudaria: letra-secundaria;
+$font-base: "Arial, Helvetica, sans-serif";
+
+/*fin variables-fonts*/
+
+/*colores*/
+
+$color1: #37BCF9;
+$color2: #00538C;
+$color3: #393D3F;
+
+/*colores fin*/

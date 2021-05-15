@@ -1,0 +1,327 @@
+/*fonts*/
+@font-face {
+  src: url(../fonts/BebasNeue.otf);
+  font-family: "letra-primaria";
+}
+@font-face {
+  src: url(../fonts/TrebuchetMS.ttf);
+  font-family: "letra-secundaria";
+}
+@font-face {
+  src: url(../fonts/websymbols-regular-webfont.eot);
+  font-family: "simbol1";
+}
+@font-face {
+  src: url(../fonts/websymbols-regular-webfont.svg);
+  font-family: "simbol2";
+}
+@font-face {
+  src: url(../fonts/websymbols-regular-webfont.ttf);
+  font-family: "simbol3";
+}
+@font-face {
+  src: url(../fonts/websymbols-regular-webfont.woff);
+  font-family: "simbol4";
+}
+/*fin fonts*/
+/*variables-fonts*/
+/*fin variables-fonts*/
+/*colores*/
+/*colores fin*/
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  display: grid;
+  grid-template-columns: 1fr 28%;
+  grid-template-rows: auto auto auto;
+  grid-template-areas: "header header" "section aside" "footer footer";
+  background-image: url(../img/pattern.png);
+}
+
+.header {
+  display: grid;
+  grid-area: header;
+}
+
+.section {
+  display: grid;
+  grid-area: section;
+}
+
+.aside {
+  display: grid;
+  grid-area: aside;
+}
+
+.footer {
+  display: grid;
+  grid-area: footer;
+  background-color: black;
+}
+
+/*fonts*/
+@font-face {
+  src: url(../fonts/BebasNeue.otf);
+  font-family: "letra-primaria";
+}
+@font-face {
+  src: url(../fonts/TrebuchetMS.ttf);
+  font-family: "letra-secundaria";
+}
+@font-face {
+  src: url(../fonts/websymbols-regular-webfont.eot);
+  font-family: "simbol1";
+}
+@font-face {
+  src: url(../fonts/websymbols-regular-webfont.svg);
+  font-family: "simbol2";
+}
+@font-face {
+  src: url(../fonts/websymbols-regular-webfont.ttf);
+  font-family: "simbol3";
+}
+@font-face {
+  src: url(../fonts/websymbols-regular-webfont.woff);
+  font-family: "simbol4";
+}
+/*fin fonts*/
+/*variables-fonts*/
+/*fin variables-fonts*/
+/*colores*/
+/*colores fin*/
+.cabecera {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  height: 70px;
+  background-color: black;
+}
+.cabecera .cabecera__boton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #37BCF9;
+  width: 180px;
+  height: 55px;
+  margin-left: 6%;
+  /*revisar*/
+  transition: 0.3s all;
+}
+.cabecera .cabecera__boton .cabecera__boton-simbolo {
+  font-size: 28px;
+  margin-right: 20px;
+  font-family: simbol1, simbol2, simbol3, simbol4;
+  animation-name: "rotacion";
+  animation-timing-function: linear;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  transition: 0.3s all;
+}
+.cabecera .cabecera__boton .cabecera__boton-titulo {
+  font-family: letra-primaria;
+  font-size: 36px;
+  letter-spacing: 2px;
+  transition: 0.3s all;
+}
+@keyframes rotacion {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.cabecera .cabecera__boton:hover {
+  background-color: #393D3F;
+}
+.cabecera .cabecera__boton:hover .cabecera__boton-simbolo {
+  color: white;
+  transform: scale(1.1);
+}
+.cabecera .cabecera__boton:hover .cabecera__boton-titulo {
+  color: white;
+  transform: scale(1.1);
+}
+.cabecera .cabecera__nav {
+  width: 340px;
+  height: 30px;
+  margin-right: 5%;
+}
+.cabecera .cabecera__nav .cabecera__nav-lista {
+  height: 100%;
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.cabecera .cabecera__nav .cabecera__nav-lista .nav__li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  list-style: none;
+}
+.cabecera .cabecera__nav .cabecera__nav-lista .nav__li .nav__a {
+  color: white;
+  text-decoration: none;
+  font-family: letra-primaria;
+  font-size: 22px;
+  letter-spacing: 1px;
+  transition: 0.3s transform;
+}
+.cabecera .cabecera__nav .cabecera__nav-lista .nav__li .nav__a:hover {
+  color: #37BCF9;
+  transform: scale(1.3);
+}
+
+.titulo {
+  display: flex;
+  justify-content: center;
+  margin-top: 18px;
+}
+.titulo .titulo__caja {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 88%;
+  height: 90px;
+  border: 7px solid white;
+  background-image: url(../img/bakbaner.png);
+  background-position-x: -130px;
+  background-position-y: -160px;
+  box-shadow: 0px 0px 2px gray;
+}
+.titulo .titulo__caja-h1 {
+  color: white;
+  font-size: 45px;
+  font-family: letra-primaria;
+  letter-spacing: 2px;
+  font-weight: normal;
+}
+
+.card {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+.card .card__contenedor {
+  display: flex;
+  justify-content: space-between;
+  width: 88%;
+}
+.card .card__contenedor .card__contenedor-tarjetas {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  height: 280px;
+  flex-basis: 17.5%;
+  box-shadow: 0px 0px 2px gray;
+}
+.card .card__contenedor .card__contenedor-tarjetas .card__tarjetas-simbolo {
+  font-family: simbol1, simbol2, simbol3, simbol4;
+}
+.card .card__contenedor .card__contenedor-tarjetas .card__tarjetas-titulo {
+  font-family: letra-secundaria;
+  color: #00538C;
+}
+.card .card__contenedor .card__contenedor-tarjetas .card__tarjetas-descipcion {
+  font-family: "Arial, Helvetica, sans-serif";
+  color: #37BCF9;
+}
+
+/*fonts*/
+@font-face {
+  src: url(../fonts/BebasNeue.otf);
+  font-family: "letra-primaria";
+}
+@font-face {
+  src: url(../fonts/TrebuchetMS.ttf);
+  font-family: "letra-secundaria";
+}
+@font-face {
+  src: url(../fonts/websymbols-regular-webfont.eot);
+  font-family: "simbol1";
+}
+@font-face {
+  src: url(../fonts/websymbols-regular-webfont.svg);
+  font-family: "simbol2";
+}
+@font-face {
+  src: url(../fonts/websymbols-regular-webfont.ttf);
+  font-family: "simbol3";
+}
+@font-face {
+  src: url(../fonts/websymbols-regular-webfont.woff);
+  font-family: "simbol4";
+}
+/*fin fonts*/
+/*variables-fonts*/
+/*fin variables-fonts*/
+/*colores*/
+/*colores fin*/
+/*fonts*/
+@font-face {
+  src: url(../fonts/BebasNeue.otf);
+  font-family: "letra-primaria";
+}
+@font-face {
+  src: url(../fonts/TrebuchetMS.ttf);
+  font-family: "letra-secundaria";
+}
+@font-face {
+  src: url(../fonts/websymbols-regular-webfont.eot);
+  font-family: "simbol1";
+}
+@font-face {
+  src: url(../fonts/websymbols-regular-webfont.svg);
+  font-family: "simbol2";
+}
+@font-face {
+  src: url(../fonts/websymbols-regular-webfont.ttf);
+  font-family: "simbol3";
+}
+@font-face {
+  src: url(../fonts/websymbols-regular-webfont.woff);
+  font-family: "simbol4";
+}
+/*fin fonts*/
+/*variables-fonts*/
+/*fin variables-fonts*/
+/*colores*/
+/*colores fin*/
+/*fonts*/
+@font-face {
+  src: url(../fonts/BebasNeue.otf);
+  font-family: "letra-primaria";
+}
+@font-face {
+  src: url(../fonts/TrebuchetMS.ttf);
+  font-family: "letra-secundaria";
+}
+@font-face {
+  src: url(../fonts/websymbols-regular-webfont.eot);
+  font-family: "simbol1";
+}
+@font-face {
+  src: url(../fonts/websymbols-regular-webfont.svg);
+  font-family: "simbol2";
+}
+@font-face {
+  src: url(../fonts/websymbols-regular-webfont.ttf);
+  font-family: "simbol3";
+}
+@font-face {
+  src: url(../fonts/websymbols-regular-webfont.woff);
+  font-family: "simbol4";
+}
+/*fin fonts*/
+/*variables-fonts*/
+/*fin variables-fonts*/
+/*colores*/
+/*colores fin*/
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,145 @@
+@import 'variables';
+
+.cabecera{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+	height: 70px;
+	background-color: black;
+	.cabecera__boton{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background-color: $color1;
+		width: 180px;
+		height: 55px;
+		margin-left: 6%; /*revisar*/
+		transition: 0.3s all;
+		.cabecera__boton-simbolo{
+			font-size: 28px;
+			margin-right: 20px;
+			font-family: simbol1, simbol2, simbol3, simbol4;
+			animation-name: "rotacion";
+			animation-timing-function: linear;
+			animation-duration: 2s;
+			animation-iteration-count: infinite;
+			transition: 0.3s all;
+		}
+		.cabecera__boton-titulo{
+			font-family: $font-primaria;
+			font-size: 36px;
+			letter-spacing: 2px;
+			transition: 0.3s all;
+		}
+	}
+
+	@keyframes rotacion {
+		from{
+			transform: rotate(0deg);
+		}
+		to{
+			transform: rotate(360deg);
+		}
+	}
+
+	.cabecera__boton:hover{
+		background-color: $color3;
+		.cabecera__boton-simbolo{
+			color: white;
+			transform: scale(1.1);
+		}
+		.cabecera__boton-titulo{
+			color: white;
+			transform: scale(1.1);
+		}
+	}
+
+	.cabecera__nav{
+		width: 340px;
+		height: 30px;
+		margin-right: 5%;
+		.cabecera__nav-lista{
+			height: 100%;
+			display: flex;
+			align-items: stretch;
+			justify-content: space-between;
+			flex-wrap: wrap;
+			.nav__li{
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				flex-grow: 1;
+				list-style: none;
+				.nav__a{
+					color: white;
+					text-decoration: none;
+					font-family: $font-primaria;
+					font-size: 22px;
+					letter-spacing: 1px;
+					transition: 0.3s transform;
+				}
+				.nav__a:hover{
+					color: $color1;
+					transform: scale(1.3);
+				}
+			}
+			
+		}
+	}
+}
+
+.titulo{
+	display: flex;
+	justify-content: center;
+	margin-top: 18px;
+	.titulo__caja{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 88%;
+		height: 90px;
+		border: 7px solid white;
+		background-image: url(../img/bakbaner.png);
+		background-position-x: -130px;
+		background-position-y: -160px;
+		box-shadow: 0px 0px 2px gray;
+	}
+	.titulo__caja-h1{
+		color: white;
+		font-size: 45px;
+		font-family: $font-primaria;
+		letter-spacing: 2px;
+		font-weight: normal;
+	}
+}
+
+.card{
+	display: flex;
+	justify-content: center;
+	margin-top: 50px;
+	.card__contenedor{
+		display: flex;
+		justify-content: space-between;
+		width: 88%;
+		.card__contenedor-tarjetas{
+			display: flex;
+			justify-content: center;
+			flex-wrap: wrap;
+			height: 280px;
+			flex-basis: 17.5%;
+			box-shadow: 0px 0px 2px gray;
+			.card__tarjetas-simbolo{
+				font-family: simbol1, simbol2, simbol3, simbol4;
+			}
+			.card__tarjetas-titulo{
+				font-family: $font-secudaria;
+				color: $color2;
+			}
+			.card__tarjetas-descipcion{
+				font-family: $font-base;
+				color: $color1;
+			}
+		}
+	}
+}
