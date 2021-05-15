@@ -43,11 +43,24 @@
 		}
 	}
 
+	@keyframes rotacion-stop{
+		from{
+			transform: rotate(0deg);
+		}
+		to{
+			transform: rotate(360deg);
+		}
+	}
+
 	.cabecera__boton:hover{
 		background-color: $color3;
 		.cabecera__boton-simbolo{
 			color: white;
 			transform: scale(1.1);
+			animation-name: rotacion-stop;
+			animation-timing-function: linear;
+			animation-duration: 0.5s;
+			animation-iteration-count: 1;
 		}
 		.cabecera__boton-titulo{
 			color: white;
@@ -111,6 +124,21 @@
 		font-family: $font-primaria;
 		letter-spacing: 2px;
 		font-weight: normal;
+		animation-name: titulo__caja-andante;
+		animation-duration: 3s;
+		animation-iteration-count: 1;
+		animation-timing-function: linear;
+	}
+
+	@keyframes titulo__caja-andante {
+		from{
+			color: transparent;
+			transform: scale(0);
+		}
+
+		to{
+			color: white;
+		}
 	}
 }
 
@@ -120,26 +148,100 @@
 	margin-top: 50px;
 	.card__contenedor{
 		display: flex;
-		justify-content: space-between;
+		justify-content: space-around;
 		width: 88%;
+		flex-wrap: wrap;
 		.card__contenedor-tarjetas{
 			display: flex;
 			justify-content: center;
+			align-items: center;
+			flex-direction: column;
 			flex-wrap: wrap;
+			overflow: hidden;
 			height: 280px;
 			flex-basis: 17.5%;
-			box-shadow: 0px 0px 2px gray;
+			box-shadow: 0px 0px 2px gray, 1px 1px 3px rgb(165, 165, 165);
+			background-color: white;
+			transition: 0.3s all;
 			.card__tarjetas-simbolo{
 				font-family: simbol1, simbol2, simbol3, simbol4;
+				margin-bottom: 20px;
+				font-size: 40px;
+				transition: 0.5s all;
 			}
 			.card__tarjetas-titulo{
 				font-family: $font-secudaria;
 				color: $color2;
+				margin-bottom: 20px;
+				padding: 0px 5px 0px 5px;
+				text-align: center;
+				transition: 0.5s all;
 			}
 			.card__tarjetas-descipcion{
 				font-family: $font-base;
-				color: $color1;
+				color: $color2;
+				padding: 0px 10px 0px 10px;
+				text-align: center;
+				transition: 0.5s all;
 			}
+
+
 		}
+
+		.card__contenedor-tarjetas:hover{
+			background-color: black;
+			.card__tarjetas-simbolo{
+				color: $color1;
+				animation-name: card__tarjetas-arriba;
+				animation-timing-function: linear;
+				animation-iteration-count: 1;
+				animation-duration: 0.4s;
+			}
+			.card__tarjetas-titulo{
+				color: $color1;
+				animation-name: card__tarjetas-derecha;
+				animation-timing-function: linear;
+				animation-iteration-count: 1;
+				animation-duration: 0.3s;
+			}
+			.card__tarjetas-descipcion{
+				color: $color1;
+				transform: scale(1.1);
+				animation-name: card__tarjetas-abajo;
+				animation-timing-function: linear;
+				animation-iteration-count: 1;
+				animation-duration: 0.3s;
+			}
+			@keyframes card__tarjetas-arriba {
+				from{
+					transform: translateY(-200px);
+				}
+
+				to{
+					transform: translateY(0px);
+				}
+			}
+
+			@keyframes card__tarjetas-derecha {
+				from{
+					transform: translateX(300px);
+				}
+
+				to{
+					transform: translateX(0px);
+				}
+			}
+
+			@keyframes card__tarjetas-abajo {
+				from{
+					transform: translateY(200px);
+				}
+
+				to{
+					transform: translateY(0px);
+				}
+			}
+		}	
+
 	}
 }
